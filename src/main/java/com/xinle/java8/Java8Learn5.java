@@ -11,12 +11,10 @@ public class Java8Learn5 {
         Student student2 = new Student("lisi", 90, 30);
         Student student3 = new Student("wangwu", 80, 40);
         Student student4 = new Student("zhangsan", 80, 40);
-
         Student student5 = new Student("zhangsan",90,20);
         Student student6 = new Student("lisi",100,20);
         Student student7 = new Student("wangwu",90,20);
         Student student8 = new Student("zhangsan",100,20);
-
 
         List<Student> studentList = Arrays.asList(student1, student2, student3, student4,student5, student6, student7, student8);
 
@@ -42,8 +40,6 @@ public class Java8Learn5 {
 
         System.out.println(map4);
 
-
-
         String name = studentList.stream().map(Student::getName).collect(Collectors.joining());
 
         System.out.println(name);
@@ -52,16 +48,9 @@ public class Java8Learn5 {
 
         System.out.println(name1);
 
+        Map<Integer, Map<String ,List<Student>>>  map5 = studentList.stream().collect(Collectors.groupingBy(Student::getScore, Collectors.groupingBy(Student::getName)));
 
-
-
-        studentList.stream().collect(Collectors.groupingBy(Student::getScore, Collectors.groupingBy(Student::getName)));
-
-
-
-
-
-
+        System.out.println(map5);
 
     }
 
