@@ -16,6 +16,11 @@ public class Java8Learn6 {
 //        Collections.sort(list, (item1, item2) -> item2.length() - item1.length());
 
 
+
+
+
+
+
 //        Collections.sort(list, Comparator.comparingInt(String::length).reversed());
 
 //        Collections.sort(list,Comparator.comparingInt(String::length).reversed());
